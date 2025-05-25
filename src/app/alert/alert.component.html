@@ -1,0 +1,10 @@
+<div [ngClass]="'alert alert-' + type + ' d-flex justify-content-between align-items-center'" role="alert" style="width: 540px;">
+  <div class="d-flex align-items-center" style="gap: 0.5rem;">
+    <i *ngIf="type == 'success'" class="bi bi-check-circle-fill"></i>
+    <i *ngIf="type == 'danger'" class="bi bi-x-circle-fill"></i>
+    <i *ngIf="type == 'warning'" class="bi bi-exclamation-triangle-fill"></i>
+    <i *ngIf="type == 'info'" class="bi bi-info-circle-fill"></i>
+    <div>{{ message }}</div>
+  </div>
+  <i class="bi bi-x-lg" style="cursor: pointer;" (click)="onClose()"></i>
+</div>
